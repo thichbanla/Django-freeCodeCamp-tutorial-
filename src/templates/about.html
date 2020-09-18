@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>About me</h1>    
+    <p>{{ my_text }}</p>
+    <ul>
+    {% for sub_item in my_list %}
+        {% if sub_item == 2 %}
+            <li>{{ sub_item|add:10 }} </li>        
+        {% else %}
+            <li>{{ sub_item }}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endblock %}
